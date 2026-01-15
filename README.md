@@ -11,41 +11,27 @@ Automated Logging: Saves every report to `~/logs/system_health.log` using the `t
 
 Cron-ready: Optimized for scheduled execution.
 
-Setup & Usage
+## Setup & usage
 
-    Clone the repo:
-    Bash
+1. Clone the repo:
+git clone [https://github.com/rgrandverger/bash-system-health.git](https://github.com/rgrandverger/bash-system-health.git)
 
-    git clone [https://github.com/rgrandverger/bash-system-health.git](https://github.com/rgrandverger/bash-system-health.git)
+2. Make it executable:
+chmod +x system_health.sh
 
-    Make it executable:
-    Bash
+3. Run it manually:
+./system_health.sh
 
-    chmod +x system_health.sh
+## Automation with cron
 
-    Run it manually:
-    Bash
+1. Open crontab:
+crontab -e
 
-    ./system_health.sh
+2. Add the following line at the end (ensure the path is correct):
+* * * * * /home/system_health.sh  <---
 
-Automation with Cron
-
-To set up automated monitoring (e.g., every minute), you can add this script to your crontab:
-
-    Open crontab:
-    Bash
-
-    crontab -e
-
-    Add the following line at the end (ensure the path is correct):
-    Bash
-
-    * * * * * /home/rikard/system_health.sh
-
-    You can check the logs anytime with:
-    Bash
-
-    cat ~/logs/system_health.log
+3. You can check the logs anytime with:
+cat ~/logs/system_health.log
 
 ## Preview
 ```text
