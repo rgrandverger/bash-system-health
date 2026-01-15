@@ -14,23 +14,29 @@ Cron-ready: Optimized for scheduled execution.
 ## Setup & usage
 
 1. Clone the repo:
+   
 git clone [https://github.com/rgrandverger/bash-system-health.git](https://github.com/rgrandverger/bash-system-health.git)
 
-2. Make it executable:
+3. Make it executable:
+   
 chmod +x system_health.sh
 
-3. Run it manually:
+5. Run it manually:
+   
 ./system_health.sh
 
 ## Automation with cron
 
 1. Open crontab:
+
 crontab -e
 
 2. Add the following line at the end (ensure the path is correct):
-* * * * * /home/system_health.sh  <---
+
+* * * * * /home/system_health.sh  
 
 3. You can check the logs anytime with:
+   
 cat ~/logs/system_health.log
 
 ## Preview
